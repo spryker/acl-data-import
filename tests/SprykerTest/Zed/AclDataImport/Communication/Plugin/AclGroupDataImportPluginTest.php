@@ -49,9 +49,6 @@ class AclGroupDataImportPluginTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testImportImportsAclGroup(): void
     {
         // Arrange
@@ -74,9 +71,6 @@ class AclGroupDataImportPluginTest extends Unit
         $this->assertSame(static::EXPECTED_IMPORT_COUNT, $dataImporterReportTransfer->getImportedDataSetCount());
     }
 
-    /**
-     * @return void
-     */
     public function testImportImportsAclGroupWithEmptyName(): void
     {
         // Arrange
@@ -95,9 +89,6 @@ class AclGroupDataImportPluginTest extends Unit
         $this->getAclGroupDataImportPlugin()->import($dataImportConfigurationTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testGetImportTypeReturnsTypeOfImporter(): void
     {
         // Arrange
@@ -110,9 +101,6 @@ class AclGroupDataImportPluginTest extends Unit
         $this->assertEquals(AclDataImportConfig::IMPORT_TYPE_ACL_GROUP, $importType);
     }
 
-    /**
-     * @return \Spryker\Zed\AclDataImport\Communication\Plugin\AclGroupDataImportPlugin
-     */
     protected function getAclGroupDataImportPlugin(): AclGroupDataImportPlugin
     {
         return new AclGroupDataImportPlugin();

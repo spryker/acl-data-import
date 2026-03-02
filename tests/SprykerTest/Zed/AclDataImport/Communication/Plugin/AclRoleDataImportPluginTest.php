@@ -54,9 +54,6 @@ class AclRoleDataImportPluginTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testImportImportsAclRole(): void
     {
         // Arrange
@@ -104,9 +101,6 @@ class AclRoleDataImportPluginTest extends Unit
         ($this->getAclRoleDataImportPlugin())->import($dataImportConfigurationTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testGetImportTypeReturnsTypeOfImporter(): void
     {
         // Arrange
@@ -119,9 +113,6 @@ class AclRoleDataImportPluginTest extends Unit
         $this->assertEquals(AclDataImportConfig::IMPORT_TYPE_ACL_ROLE, $importType);
     }
 
-    /**
-     * @return \Spryker\Zed\AclDataImport\Communication\Plugin\AclRoleDataImportPlugin
-     */
     protected function getAclRoleDataImportPlugin(): AclRoleDataImportPlugin
     {
         return new AclRoleDataImportPlugin();

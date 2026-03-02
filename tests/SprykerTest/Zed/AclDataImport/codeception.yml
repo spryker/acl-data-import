@@ -1,4 +1,4 @@
-namespace: SprykerTest\Zed\AclRoleDataImport
+namespace: SprykerTest\Zed\AclDataImport
 
 paths:
     tests: .

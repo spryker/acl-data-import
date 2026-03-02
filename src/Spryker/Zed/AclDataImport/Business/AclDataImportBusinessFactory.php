@@ -24,9 +24,6 @@ use Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
  */
 class AclDataImportBusinessFactory extends DataImportBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
-     */
     public function getAclRoleDataImport(): DataImporterInterface
     {
         $dataImporter = $this->getCsvDataImporterFromConfig($this->getConfig()->getAclRoleDataImporterConfiguration());
@@ -40,17 +37,11 @@ class AclDataImportBusinessFactory extends DataImportBusinessFactory
         return $dataImporter;
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createAclRoleWriterStep(): DataImportStepInterface
     {
         return new AclRoleWriterStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
-     */
     public function getAclGroupDataImport(): DataImporterInterface
     {
         $dataImporter = $this->getCsvDataImporterFromConfig($this->getConfig()->getAclGroupDataImporterConfiguration());
@@ -64,17 +55,11 @@ class AclDataImportBusinessFactory extends DataImportBusinessFactory
         return $dataImporter;
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createAclGroupWriterStep(): DataImportStepInterface
     {
         return new AclGroupWriterStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
-     */
     public function getAclGroupRoleDataImport(): DataImporterInterface
     {
         $dataImporter = $this->getCsvDataImporterFromConfig(
@@ -92,49 +77,31 @@ class AclDataImportBusinessFactory extends DataImportBusinessFactory
         return $dataImporter;
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createAclGroupReferenceToIdAclGroupStep(): DataImportStepInterface
     {
         return new AclGroupReferenceToIdAclGroupStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createAclRoleReferenceToIdAclRoleStep(): DataImportStepInterface
     {
         return new AclRoleReferenceToIdAclRoleStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createAclGroupRoleWriterStep(): DataImportStepInterface
     {
         return new AclGroupRoleWriterStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createAclGroupRequiredFieldValidatorStep(): DataImportStepInterface
     {
         return new AclGroupRequiredFieldValidatorStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createAclRoleRequiredFieldValidatorStep(): DataImportStepInterface
     {
         return new AclRoleRequiredFieldValidatorStep();
     }
 
-    /**
-     * @return \Spryker\Zed\DataImport\Business\Model\DataImportStep\DataImportStepInterface
-     */
     public function createAclGroupRoleRequiredFieldValidatorStep(): DataImportStepInterface
     {
         return new AclGroupRoleRequiredFieldValidatorStep();

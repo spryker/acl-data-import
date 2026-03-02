@@ -82,9 +82,6 @@ class AclGroupRoleDataImportPluginTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testImportImportsAclGroupRole(): void
     {
         // Arrange
@@ -136,9 +133,6 @@ class AclGroupRoleDataImportPluginTest extends Unit
         $this->assertSame(static::EXPECTED_IMPORT_COUNT, $dataImporterReportTransfer->getImportedDataSetCount());
     }
 
-    /**
-     * @return void
-     */
     public function testImportImportsAclGroupRoleWithEmptyGroupReference(): void
     {
         // Arrange
@@ -157,9 +151,6 @@ class AclGroupRoleDataImportPluginTest extends Unit
         $this->getAclGroupRoleDataImportPlugin()->import($dataImportConfigurationTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testImportImportsAclGroupRoleWithEmptyRoleReference(): void
     {
         // Arrange
@@ -178,9 +169,6 @@ class AclGroupRoleDataImportPluginTest extends Unit
         $this->getAclGroupRoleDataImportPlugin()->import($dataImportConfigurationTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testGetImportTypeReturnsTypeOfImporter(): void
     {
         // Arrange
@@ -193,9 +181,6 @@ class AclGroupRoleDataImportPluginTest extends Unit
         $this->assertEquals(AclDataImportConfig::IMPORT_TYPE_ACL_GROUP_ROLE, $importType);
     }
 
-    /**
-     * @return \Spryker\Zed\AclDataImport\Communication\Plugin\AclGroupRoleDataImportPlugin
-     */
     protected function getAclGroupRoleDataImportPlugin(): AclGroupRoleDataImportPlugin
     {
         return new AclGroupRoleDataImportPlugin();
