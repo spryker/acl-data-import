@@ -13,16 +13,22 @@ use Spryker\Zed\DataImport\DataImportConfig;
 class AclDataImportConfig extends DataImportConfig
 {
     /**
+     * @api
+     *
      * @var string
      */
     public const IMPORT_TYPE_ACL_ROLE = 'acl-role';
 
     /**
+     * @api
+     *
      * @var string
      */
     public const IMPORT_TYPE_ACL_GROUP = 'acl-group';
 
     /**
+     * @api
+     *
      * @var string
      */
     public const IMPORT_TYPE_ACL_GROUP_ROLE = 'acl-group-role';
